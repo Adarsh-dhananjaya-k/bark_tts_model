@@ -1,0 +1,7 @@
+SpeechRecognition
+transformers
+accelerate
+soundfile
+scipy
+# torch
+# torchaudio

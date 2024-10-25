@@ -1,0 +1,18 @@
+version: '3.8'
+
+
+services:
+  test:
+    image: bark_tts
+    # command: nvidia-smi
+    volumes:
+      -  .:/app  
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    # command: ["tail", "-f", "/dev/null"] 
+    command: ['python3','bark_app.py']
